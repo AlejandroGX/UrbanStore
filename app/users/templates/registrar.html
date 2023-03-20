@@ -1,0 +1,109 @@
+{% extends "base.html"%}
+{% block title %}A&D Tienda de Ropa{% endblock %}
+
+{% block content %}
+
+<section class="page-section" id="hombre">
+    <form action = "{{url_for('registrado.agre')}}" method = "POST">
+        <!--
+        <div class="container" id="cont2">
+            <div class="text-center">
+                <br>
+                <h2 class="section-heading text-uppercase">Registrarse</h2>
+            </div> 
+              
+            <div class="row mb-3">
+                <label for="id" class="col-sm-2 col-form-label">Identificación</label>
+                <div class="col-sm-10">
+                    <input type="number" name="id" id="id" placeholder="Documento de Identificación"  class="form-control" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="nombreC" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-10">
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" class="form-control" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="nombreC" class="col-sm-2 col-form-label">Apellido</label>
+                <div class="col-sm-10">
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" class="form-control" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="correo" class="col-sm-2 col-form-label">Correo</label>
+                <div class="col-sm-10">
+                    <input type="email" name="correo" id="correo" placeholder="Ingrese su correo electronico"  class="form-control" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="celular" class="col-sm-2 col-form-label">Celular</label>
+                <div class="col-sm-10">
+                    <input type="number" name="celular" id="celular" placeholder="Ingrese el numero de su Celular"  class="form-control" required>
+                </div>
+            </div>    
+            <div class="row mb-3">
+                <label for="celular" class="col-sm-2 col-form-label">Ciudad</label>
+                <div class="col-sm-10">
+                    <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad de residencia"  class="form-control" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="celular" class="col-sm-2 col-form-label">Dirección</label>
+                <div class="col-sm-10">
+                    <input type="text" name="direccion" id="direccion" placeholder="Direccion de recidencia"  class="form-control" required>
+                </div>
+            </div>  
+            <button class="btn btn-primary">Registrar</button>     
+              
+            <br>
+            </div>
+        </div>
+        -->
+        <div class="container py-1 h-70">
+            <div class="row d-flex justify-content-center align-items-center h-70">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-7">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                                <h2 class="fw-bold mb-2 text-uppercase">Registrarse</h2>
+                                <p class="text-white-50 mb-5">¡Registra tus datos personales!</p>
+                
+                                
+                                    <div class="py-3">
+                                        <input type="number" name="id" id="id" placeholder="Documento de Identificación"  class="form-control" required>
+                                    </div>
+                                    <div class="py-3">
+                                        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" class="form-control" required>
+                                    </div>
+                                    <div class="py-3">
+                                        <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" class="form-control" required>
+                                    </div>
+                                    <div class="py-3">
+                                        <input type="email" name="correo" id="correo" placeholder="Ingrese su correo electronico"  class="form-control" required>
+                                    </div>
+                                    <div class="py-3">
+                                        <input type="text" name="password" id="password" placeholder="Ingrese su contraseña"  class="form-control" required>
+                                    </div>
+                                    <div class="py-3">
+                                        <input type="number" name="celular" id="celular" placeholder="Ingrese el numero de su Celular"  class="form-control" required>
+                                    </div>
+                                    <div class="py-3">
+                                        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad de residencia"  class="form-control" required>
+                                    </div>
+                                    <div class="py-3">
+                                        <input type="text" name="direccion" id="direccion" placeholder="Direccion de recidencia"  class="form-control" required>
+                                    </div>
+                                
+                                </br></br>
+                                <button class="btn btn-primary">Registrar</button> 
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html"%}
+{% block title %}A&D Tienda de Ropa{% endblock %}
+
+{% block content %}
+<section class="page-section" id="hombre">
+    <div class="container">
+        <div class="py-5">
+        <h3>Chaquetas</h3>
+        <table class="table table-striped table-hover">
+            <thead class="thead-green">
+                <tr>
+                    <td>ID Cliente</td>
+                    <td>ID Prenda</td>
+                    <td>Cantidad</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        <td>{{row["id_user"]}}</td>
+                        <td>{{row["id_cam"]}}</td>
+                        <td>{{row['quantity']}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div align="center">
+        <a class="btn btn-primary btn-xl text-uppercase" href="{{url_for('administrador.adm')}}">Volver</a>
+    </div>
+</section>
+
+
+{% endblock %}

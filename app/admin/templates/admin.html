@@ -1,0 +1,46 @@
+{% extends "base.html"%}
+{% block title %}A&D Tienda de Ropa{% endblock %}
+
+{% block content %}
+<section class="page-section" id="hombre">
+    <div class="container">
+        <div class="text-center py-3">
+            <h2 class="section-heading text-uppercase">Administración</h2>
+        </div>
+        <div class="row py-3">
+            <div class="col-lg-6 col-sm-6 mb-4">
+                <!-- Portfolio item 1-->
+                <div class="hombre-item">
+                    <a class="hombre-link" href="{{url_for('administrador.cli')}}">
+                        <div class="hombre-hover">
+                            <div class="hombre-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="../static/img/clientes.png" alt="..." />
+                    </a>
+                    <div class="hombre-caption">
+                        <div class="hombre-caption-heading">Clientes</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 mb-4">
+                <!-- Portfolio item 2-->
+                <div class="hombre-item">
+                    <a class="hombre-link" href="{{url_for('paginacion.pag', num_page=1)}}">
+                        <div class="hombre-hover">
+                            <div class="hombre-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="../static/img/prendas.png" alt="..." />
+                    </a>
+                    <div class="hombre-caption">
+                        <div class="hombre-caption-heading">Prendas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div align="center">
+            <a class="btn btn-primary btn-xl text-uppercase" href="/logout">Salir</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html"%}
+{% block title %}A&D Tienda de Ropa{% endblock %}
+
+{% block content %}
+        
+        <!-- Seccion de Hombres-->
+        <section class="page-section" id="hombre">
+            <div class="container">
+                <div class="text-center">
+                    <br>
+                    <h2 class="section-heading text-uppercase">Seccion de hombre</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="hombre-item">
+                            <a class="hombre-link"  href="{{url_for('hchaquetas.cha')}}">
+                                <div class="hombre-hover">
+                                    <div class="hombre-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="../static/img/portfolio/chaqueta.png" alt="..." />
+                            </a>
+                            <div class="hombre-caption">
+                                <div class="hombre-caption-heading">Chaquetas</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="hombre-item">
+                            <a class="hombre-link" href="{{url_for('hcamisetas.cam')}}">
+                                <div class="hombre-hover">
+                                    <div class="hombre-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="../static/img/portfolio/camiseta.png" alt="..." />
+                            </a>
+                            <div class="hombre-caption">
+                                <div class="hombre-caption-heading">Camisetas</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="hombre-item">
+                            <a class="hombre-link" href="{{url_for('hjeans.jea')}}">
+                                <div class="hombre-hover">
+                                    <div class="hombre-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="../static/img/portfolio/pantalon.jpg" alt="..." />
+                            </a>
+                            <div class="hombre-caption">
+                                <div class="hombre-caption-heading">Jeans</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

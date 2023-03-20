@@ -1,0 +1,241 @@
+{% extends "base.html"%}
+{% block title %}A&D Tienda de Ropa{% endblock %}
+
+{% block content %}
+<section class="page-section" id="hombre">
+    <div class="container">
+        {%if rows1 :%}
+        <div class="py-5">
+        <h3>Chaquetas</h3>
+        <table class="table table-striped table-hover">
+            <thead class="thead-green">
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Detalles</td>
+                    <td>Talla</td>
+                    <td>Precio</td>
+                    <td>URL</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows1 %}
+                    <tr>
+                        <td>{{row["id_cha"]}}</td>
+                        <td>{{row["nom_cha"]}}</td>
+                        <td>{{row['det_cha']}}</td>	
+                        <td>{{row['talla_cha']}}</td>	
+                        <td>{{row['precio_cha']}}</td>
+                        <td>{{row['url_cha']}}</td>	
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {% for pag in range(1,7) %}
+                <li class="page-item">
+                    <a class="page-link" href="{{url_for('paginacion.pag', num_page=pag)}}">{{ pag }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        </div>
+        {% endif %}
+        {%if rows2 :%}
+        <div class="py-5">
+        <h3>Camisetas</h3>
+        <table class="table table-striped table-hover">
+            <thead class="thead-green">
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Detalles</td>
+                    <td>Talla</td>
+                    <td>Precio</td>
+                    <td>URL</td>
+            </tr>
+            </thead>
+            <tbody>
+                {% for row in rows2 %}
+                    <tr>
+                    <td>{{row["id_cam"]}}</td>
+                    <td>{{row["nom_cam"]}}</td>
+                    <td>{{row['det_cam']}}</td>	
+                    <td>{{row['talla_cam']}}</td>	
+                    <td>{{row['precio_cam']}}</td>
+                    <td>{{row['url_cam']}}</td>	
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {% for pag in range(1,7) %}
+                <li class="page-item">
+                    <a class="page-link" href="{{url_for('paginacion.pag', num_page=pag)}}">{{ pag }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        </div>
+        {% endif %}
+        {%if rows3 :%}
+        <div class="py-5">
+        <h3>Pantalones</h3>
+        <table class="table table-striped table-hover">
+            <thead class="thead-green">
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Detalles</td>
+                    <td>Talla</td>
+                    <td>Precio</td>
+                    <td>URL</td>
+            </tr>
+            </thead>
+            <tbody>
+                {% for row in rows3 %}
+                    <tr>
+                    <td>{{row["id_ph"]}}</td>
+                    <td>{{row["nom_ph"]}}</td>
+                    <td>{{row['det_ph']}}</td>	
+                    <td>{{row['talla_ph']}}</td>	
+                    <td>{{row['precio_ph']}}</td>
+                    <td>{{row['url_ph']}}</td>	
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {% for pag in range(1,7) %}
+                <li class="page-item">
+                    <a class="page-link" href="{{url_for('paginacion.pag', num_page=pag)}}">{{ pag }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        </div>
+        {% endif %}
+        {%if rows4 :%}
+        <div class="py-5">
+        <h3>Buzos</h3>
+        <table class="table table-striped table-hover">
+            <thead class="thead-green">
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Detalles</td>
+                    <td>Talla</td>
+                    <td>Precio</td>
+                    <td>URL</td>
+            </tr>
+            </thead>
+            <tbody>
+                {% for row in rows4 %}
+                    <tr>
+                    <td>{{row["id_buz"]}}</td>
+                    <td>{{row["nom_buz"]}}</td>
+                    <td>{{row['det_buz']}}</td>	
+                    <td>{{row['talla_buz']}}</td>	
+                    <td>{{row['precio_buz']}}</td>
+                    <td>{{row['url_buz']}}</td>	
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {% for pag in range(1,7) %}
+                <li class="page-item">
+                    <a class="page-link" href="{{url_for('paginacion.pag', num_page=pag)}}">{{ pag }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        </div>
+        {% endif %}
+        {%if rows5 :%}
+        <div class="py-5">
+        <h3>Blusas</h3>
+        <table class="table table-striped table-hover">
+            <thead class="thead-green">
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Detalles</td>
+                    <td>Talla</td>
+                    <td>Precio</td>
+                    <td>URL</td>
+            </tr>
+            </thead>
+            <tbody>
+                {% for row in rows5 %}
+                    <tr>
+                    <td>{{row["id_blu"]}}</td>
+                    <td>{{row["nom_blu"]}}</td>
+                    <td>{{row['det_blu']}}</td>	
+                    <td>{{row['talla_blu']}}</td>	
+                    <td>{{row['precio_blu']}}</td>
+                    <td>{{row['url_blu']}}</td>	
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {% for pag in range(1,7) %}
+                <li class="page-item">
+                    <a class="page-link" href="{{url_for('paginacion.pag', num_page=pag)}}">{{ pag }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        </div>
+        {% endif %}
+        {%if rows6 :%}
+        <div class="py-5">
+        <h3>Pantalones</h3>
+        <table class="table table-striped table-hover">
+            <thead class="thead-green">
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Detalles</td>
+                    <td>Talla</td>
+                    <td>Precio</td>
+                    <td>URL</td>
+            </tr>
+            </thead>
+            <tbody>
+                {% for row in rows6 %}
+                    <tr>
+                    <td>{{row["id_pm"]}}</td>
+                    <td>{{row["nom_pm"]}}</td>
+                    <td>{{row['det_pm']}}</td>	
+                    <td>{{row['talla_pm']}}</td>	
+                    <td>{{row['precio_pm']}}</td>
+                    <td>{{row['url_pm']}}</td>	
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                {% for pag in range(1,7) %}
+                <li class="page-item">
+                    <a class="page-link" href="{{url_for('paginacion.pag', num_page=pag)}}">{{ pag }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        </div>
+        {% endif %}
+    </div>
+    <div align="center">
+        <a class="btn btn-primary btn-xl text-uppercase" href="{{url_for('administrador.adm')}}">Volver</a>
+    </div>
+</section>
+
+{% endblock %}

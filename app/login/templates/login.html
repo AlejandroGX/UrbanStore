@@ -1,0 +1,41 @@
+{% extends "base.html"%}
+{% block title %}A&D Tienda de Ropa{% endblock %}
+
+{% block content %}
+
+<section class="vh-70 gradient-custom pase-section" id="hombre">
+    <form action="/login" method="POST">
+        <div class="container py-1 h-70">
+            <div class="row d-flex justify-content-center align-items-center h-70">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                
+                                <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                                <p class="text-white-50 mb-5">¡Ingrese su usuario y contraseña!</p>
+                
+                                <div class="form-group">
+                                    <input class="form-control" id="email" name="email" type="email" placeholder="Correo" data-sb-validations="required,email" />
+                                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                </div>
+                                </br>
+                                <div class="form-group mb-md-0">
+                                    <input class="form-control" id="password" name="password" type="password" placeholder="Contraseña" data-sb-validations="required" />
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Requiere de su contraseña para ingresar.</div>
+                                </div>
+                                </br></br>
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                                <p class="mb-0 py-3">¿No tiene una cuenta? <a href="{{url_for('registrar.reg')}}" class="text-white-50 fw-bold">Registrarse</a>
+                                </p>
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+       
+{% endblock %}

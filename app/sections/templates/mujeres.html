@@ -1,0 +1,58 @@
+{% extends "base.html"%}
+{% block title %}A&D Tienda de Ropa{% endblock %}
+
+{% block content %}
+    <!-- Seccion de Mujeres-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <br>
+                <h2 class="section-heading text-uppercase">Seccion de Mujeres</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" href="{{url_for('mbuzos.buz')}}">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/portfolio/busos.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Buzos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" href="{{url_for('mblusas.blu')}}">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/portfolio/blusas.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Blusas</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" href="{{url_for('mjeans.jeam')}}">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/portfolio/jeans.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Jeans</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

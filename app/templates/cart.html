@@ -1,0 +1,52 @@
+{% extends "base.html"%}
+{% block title %}A&D Tienda de Ropa{% endblock %}
+
+{% block content %}
+    <section class="page-section" id="hombre">
+        <div class="container" id="cartItems">
+            <div class="text-center">
+                <br>
+                <h2 class="section-heading text-uppercase">Carrito de Compras</h2>
+            </div>
+            <div id="tableItems">
+                {% for row in products %}
+                <hr id="seperator">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 mb-4">
+                        <div id="itemImage" align="right">
+                            <img class="img-fluid" src="{{row[3]}}" alt="..." width="180" height="180" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 mb-4">
+                        <div id="itemName">
+                        </br></br></br>
+                            <span id="itemNameTag">Nombre: {{row[1]}}</span>
+                            </br>
+                            <div id="stock">
+                                Cantidad: {{row[4]}}
+                            </div>
+                        </div>
+                        <div id="itemPrice">
+                            Precio:  ${{row[2]}}
+                        </div>
+                        {% if row[4] == 0%}
+                            <a class="btn btn-primary text-uppercase" href="/removeFromCart?id_cam={{row[0]}}">Eliminar</a>
+                        {% else %}	
+                            <a class="btn btn-primary text-uppercase" href="/removeFromCart?id_cam={{row[0]}}">Disminuir</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+                <hr id="seperator">
+                <div id="total" align="right">
+                </br>
+                    <strong>
+                        <span id="subtotal">Total de la compra</span> : ${{totalPrice}}
+                    </strong></br></br>
+                    <a class="btn btn-primary btn-xl text-uppercase" href="/pagar">Pagar</a>
+                </div>
+            </div>
+        </div>        
+    </section>
+{% endblock %}
+

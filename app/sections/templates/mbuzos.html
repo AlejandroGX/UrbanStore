@@ -1,0 +1,72 @@
+{% extends "base.html"%}
+{% block title %}A&D Tienda de Ropa{% endblock %}
+
+{% block content %}
+<section class="page-section" id="hombre">
+    <div class="container">
+        <div class="text-center">
+            <br>
+            <h2 class="section-heading text-uppercase">Sección de buzos</h2>
+        </div>
+        <div class="row py-5">
+            {% for row in rows %}
+                <div class="col-lg-3 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="hombre-item">
+                        <a class="hombre-link" data-bs-toggle="modal" href="#portfolioModal{{row["id_buz"]}}">
+                            <div class="hombre-hover">
+                                <div class="hombre-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="{{row["url_buz"]}}" alt="..." />
+                        </a>
+                        <div class="hombre-caption">
+                            <div class="hombre-caption-heading">{{row["nom_buz"]}}</div>
+                            <div class="portfolio-caption-subheading text-muted">${{row["precio_buz"]}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-modal modal fade" id="portfolioModal{{row["id_buz"]}}" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../static/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="modal-body">
+                                            <!-- Project details-->
+                                            <h2 class="text-uppercase">Descripción</h2>
+                                            <div class="row py-3">
+                                                <div class="col-lg-6 col-sm-6 mb-4">
+                                                    <img class="img-fluid d-block mx-auto" src="{{row["url_buz"]}}" alt="..." />
+                                                </div>
+                                                <div class="col-lg-6 col-sm-6 mb-4 py-5">
+                                                    <p>{{row["det_buz"]}}</p>
+                                                    <ul class="list-inline">
+                                                        <li>
+                                                            <strong>${{row["precio_buz"]}}</strong>
+                                                        </li>
+                                                        <br>
+                                                        <li>
+                                                            <strong>TALLA</strong>
+                                                            <br>
+                                                            <strong>{{row["talla_buz"]}}</strong>
+                                                        </li>
+                                                    </ul>
+                                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                                        Agregar al carrito
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            {% endfor %}
+        </div>
+    </div>
+</section>
+       
+{% endblock %}

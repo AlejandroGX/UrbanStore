@@ -1,0 +1,198 @@
+{% extends "base.html"%}
+{% block title %}A&D Tienda de Ropa{% endblock %}
+
+{% block content %}
+
+    <!-- Inicio-->
+    <header class="masthead ">
+        <div class="container py-5">
+            <br><br><br>
+            <a class="btn btn-primary btn-xl text-uppercase " href="#hombre">Comprar</a>
+        </div>
+    </header>
+
+    <!-- Seccion de Hombres-->
+    <section class="page-section" id="hombre">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Hombres</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="hombre-item">
+                        <a class="hombre-link" href="{{url_for('hchaquetas.cha')}}">
+                            <div class="hombre-hover">
+                                <div class="hombre-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/portfolio/chaqueta.png" alt="..." />
+                        </a>
+                        <div class="hombre-caption">
+                            <div class="hombre-caption-heading">Chaquetas</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="hombre-item">
+                        <a class="hombre-link" href="{{url_for('hcamisetas.cam')}}">
+                            <div class="hombre-hover">
+                                <div class="hombre-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/portfolio/camiseta.png" alt="..." />
+                        </a>
+                        <div class="hombre-caption">
+                            <div class="hombre-caption-heading">Camisetas</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="hombre-item">
+                        <a class="hombre-link" href="{{url_for('hjeans.jea')}}">
+                            <div class="hombre-hover">
+                                <div class="hombre-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/portfolio/pantalon.jpg" alt="..." />
+                        </a>
+                        <div class="hombre-caption">
+                            <div class="hombre-caption-heading">Jeans</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion de Mujeres-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Mujeres</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" href="{{url_for('mbuzos.buz')}}">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/portfolio/busos.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Buzos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" href="{{url_for('mblusas.blu')}}">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/portfolio/blusas.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Blusas</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" href="{{url_for('mjeans.jeam')}}">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/portfolio/jeans.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Jeans</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Propietarios-->
+    <section class="page-section bg-light" id="team">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Propietarios</h2>
+                <h3 class="section-subheading text-muted">Nosotros nos encargamos de brindar respaldo a tu compra.</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="../static/img/persona1.png" alt="..." />
+                        <h4>Diana Gomez</h4>
+                        <br>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/dianacarolina.gomezmartinez.7" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://instagram.com/dianagomezz_99?igshid=Yzg5MTU1MDY=" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="../static/img/persona2.png" alt="..." />
+                        <h4>Alejandro Guerrero</h4>
+                        <br>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=100001986596042" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://instagram.com/a_guerrero.x?igshid=YmMyMTA2M2Y=" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contactos-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Contactanos</h2>
+                <h3 class="section-subheading text-muted">Envianos un mensaje y nos comunicaremos contigo.</h3>
+            </div>
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- * * SB Forms Contact Form * *-->
+            <!-- * * * * * * * * * * * * * * *-->
+            <!-- This form is pre-integrated with SB Forms.-->
+            <!-- To make this form functional, sign up at-->
+            <!-- https://startbootstrap.com/solution/contact-forms-->
+            <!-- to get an API token!-->
+            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <!-- Name input-->
+                            <input class="form-control" id="name" type="text" placeholder="INGRESA TU NOMBRE" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        </div>
+                        <div class="form-group">
+                            <!-- Email address input-->
+                            <input class="form-control" id="email" type="email" placeholder="INGRESA TU CORREO ELECTRONICO" data-sb-validations="required,email" />
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+                        <div class="form-group mb-md-0">
+                            <!-- Phone number input-->
+                            <input class="form-control" id="phone" type="tel" placeholder="iNGRESA TU NUMERO DE CELULAR" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-group-textarea mb-md-0">
+                            <!-- Message input-->
+                            <textarea class="form-control" id="message" placeholder="INGRESA TU MENSAJE" data-sb-validations="required"></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a class="btn btn-primary btn-xl text-uppercase" href="{{url_for('envia')}}">ENVIAR MENSAJE</a>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}
