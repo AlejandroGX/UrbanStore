@@ -45,8 +45,9 @@
                         </div>
                         </li>
                         {% endif %}
+                        {% if loggedIn %}
                         <li class="nav-item"><a class="navbar-brand" href="/cart"><img src="../static/img/carro.png" alt="..." />{{noOfItems}}</a></li>
-                        
+                        {% endif %}
                     </ul>
                 </div>
             </div>
